@@ -16,7 +16,7 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
-#
+
 # Pokemon.create([
 #                  { name: 'Bulbasaur',
 #                    number: '001',
