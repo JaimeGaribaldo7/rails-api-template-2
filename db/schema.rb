@@ -39,14 +39,14 @@ ActiveRecord::Schema.define(version: 20161002192516) do
   create_table "pokemons", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "number"
+    t.string   "number"
     t.string   "name"
     t.string   "pokemontype"
   end
 
   create_table "teams", force: :cascade do |t|
     t.string   "name"
-    t.string   "pokemon"
+    t.string   "pokemons"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
+  get '/poke-pc/:id' => 'pokemons#index'
+  get '/teams/:id' => 'teams#index'
+  patch '/draftings/:id' => 'draftings#update'
   resources :users, only: [:index, :show]
   resources :pokemons, except: [:new, :edit]
   resources :teams, except: [:new, :edit]
