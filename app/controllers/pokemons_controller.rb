@@ -1,4 +1,4 @@
-class PokemonsController < ProtectedApplicationController
+class PokemonsController < ApplicationController
   before_action :set_pokemon, only: [:show, :update, :destroy]
 
   # GET /pokemons
@@ -26,6 +26,16 @@ class PokemonsController < ProtectedApplicationController
       render json: @pokemon.errors, status: :unprocessable_entity
     end
   end
+
+#   def create
+#   @project = current_user.projects.build(project_params)
+#
+#   if @project.save
+#     render json: @project, status: :created, location: @project
+#   else
+#     render json: @project.errors, status: :unprocessable_entity
+#   end
+# end
 
   # PATCH/PUT /pokemons/1
   # PATCH/PUT /pokemons/1.json
