@@ -34,13 +34,14 @@ module PokePC
     # config.i18n.load_path +=
     #   Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    # 8080
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
     # Cross-Origin Resource Sharing
     config.middleware.use Rack::Cors do
       allow do
-        origins ENV['CLIENT_ORIGIN'] || 'http://localhost:8080'
+        origins ENV['CLIENT_ORIGIN'] || 'https://jaimegaribaldo7.github.io'
         resource '*',
                  headers: :any,
                  methods: [:options, :get,
